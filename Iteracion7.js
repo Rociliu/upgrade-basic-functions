@@ -22,40 +22,14 @@ const nameFinder = [
 
 function finderName(arrayDeValores, valorAComprobar) {
 
-  let resultado = indexOfDeRocio(arrayDeValores, valorAComprobar);
-  // let resultado = arrayDeValores.indexOf(valorAComprobar);
-
-
+  let resultado = arrayDeValores.indexOf(valorAComprobar);//compruebo si el nombre está dentro del array, si está me da la posición si no, dará -1
   if (resultado === -1) {
     resultado = false;
-  } else {
-    resultado = {
-      posicion: resultado,
-      encontrado: true
-    }
-    // resultado = [resultado, true];
+  } else { //si no está, el resultado lo meto en un array para poder tener los dos valores
+      resultado = [resultado, true]
   }
-
   return resultado;
 }
+console.log(finderName (nameFinder, "Bruce"));
 
 
-/**
- *  funcion que replica el indexOf
- * 
- **/
-function indexOfDeRocio (arrayDeValores, valorAComprobar) {
-  let posicion = -1;
-
-  for (let i = 0; i < arrayDeValores.length; i++ ){
-     if (arrayDeValores[i] === valorAComprobar) {
-      posicion = i;
-      break;
-     }
-  }
-
-  return posicion;
-}
-
-
-console.log(finderName(nameFinder,'Jessica'));
