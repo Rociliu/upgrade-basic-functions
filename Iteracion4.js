@@ -11,7 +11,7 @@ function average() {
   let promedio = sum / numbers.length; 
   return promedio;
 }
- let p = average(numbers);
+ let media = average(numbers);
 
- console.log("El promedio es de: " + p); 
+ console.log("El promedio es de: " + media); 
 
