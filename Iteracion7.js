@@ -22,14 +22,15 @@ const nameFinder = [
 
 function finderName(arrayDeValores, valorAComprobar) {
 
-  let resultado = arrayDeValores.indexOf(valorAComprobar);//compruebo si el nombre está dentro del array, si está me da la posición si no, dará -1
-  if (resultado === -1) {
-    resultado = false;
-  } else { //si no está, el resultado lo meto en un array para poder tener los dos valores
-      resultado = [resultado, true]
+  for(let i=0; i<arrayDeValores.length; i++){
+    if (arrayDeValores.includes(valorAComprobar)){
+      return console.log (true, arrayDeValores.indexOf(valorAComprobar));
+    }else{
+      return console.log(false);
+    }
   }
-  return resultado;
-}
-console.log(finderName (nameFinder, "Bruce"));
+
+} 
+finderName (nameFinder, "Peter");
 
 
