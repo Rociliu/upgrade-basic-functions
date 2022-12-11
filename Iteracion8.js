@@ -15,27 +15,22 @@ const counterWords = [
     'code'
   ];
 
-  function repeatCounter(arrayDeValores) {
-    let objetoAuxiliar = {};
-
-      for (let valor of arrayDeValores) {
-
-        // comprobamos que si objetoAuxiliar tiene una propiedad llamada valor 
-        //       (valor cada vez valdrá una de las palabras del array pasado por parámetro)
-        if (!objetoAuxiliar.hasOwnProperty(valor)){
-          //entonces le creas una propiedad al objeto que se llame como la variable valor 
-          //  y le asigno un uno (porque es la primera que vemos esa palabra)
-          objetoAuxiliar[valor] = 1;
-        } else {
-          // incremento el número que habia guardado en esa propiedad
-          objetoAuxiliar[valor]++;
-        }
-
-      } 
-      return objetoAuxiliar;   
+  function repeatCounter(arrayDeValores) { 
+    let repeatWords=[];//creo un array para meter las veces que se repite cada valor del array que me pasen.
+    for (let i=0; i<arrayDeValores.length; i++){//miro la primera vuelta dando valor de cero
+      let vuelta = 0;
+      for (let j=0; j<arrayDeValores.length;j++){//si a la segunda vuelta me encuentro el mismo valor, lo sumo al array
+            if (arrayDeValores[i]===arrayDeValores[j]){
+              vuelta++;
+            }
+      }
+      repeatWords.push(vuelta);
+    }
+    return repeatWords;
   }
-
   console.log(repeatCounter(counterWords));
+
+
 
 
 
