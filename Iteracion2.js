@@ -15,7 +15,7 @@ function findLongestWord(arrayDeStrings) {
     }
     return longest;
 }   
-
+console.log(findLongestWord(avengers));
 
 
 
