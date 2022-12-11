@@ -21,3 +21,5 @@ function averageWord(arrayValores) {
 
   return suma;
 }
+let valores = averageWord(mixedElements);
+console.log(valores);
