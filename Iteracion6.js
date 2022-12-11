@@ -17,22 +17,14 @@ const duplicates = [
   ];
 
   function removeDuplicates(arrayDeValores) {
-
     let arraySinDuplicados  = [];
-
     for (let valor of arrayDeValores) {
-      // si vale -1 es que valor no está en arraySinDuplicados con lo cual, me lo guardo
-        if( arraySinDuplicados.indexOf(valor) === -1 ) {
-          arraySinDuplicados.push(valor);
-        } 
+      if( arraySinDuplicados.indexOf(valor) === -1 ) { //si indexOf ==-1 indica que el valor no está en arraySinDuplicados y me lo guardo
+            arraySinDuplicados.push(valor);
+      } 
     }
-
     return arraySinDuplicados;
   }
+console.log(removeDuplicates(duplicates));
 
-
-
-  console.log(removeDuplicates(duplicates));
-
-   
 
