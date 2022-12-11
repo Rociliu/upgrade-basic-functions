@@ -5,14 +5,14 @@
 const numbers = [1, 2, 3, 5,45, 37, 58];
 
 function sumNumbers (arrayNumber) {
-    let sum = 0;
+    let suma = 0;
     for (let num of arrayNumber){
-      sum = sum + num;
+      suma = suma + num;
     }
-   return sum; 
+   return suma; 
 }
 
-let suma = sumNumbers (numbers);
-console.log("La suma total es de : "+ suma);
+let total = sumNumbers (numbers);
+console.log("La suma total es de : "+ total);
 
 
